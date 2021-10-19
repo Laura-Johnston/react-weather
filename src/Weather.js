@@ -12,7 +12,7 @@ export default function Weather(props) {
     console.log(response.data.dt*1000);
     setWeather({
       ready: true,
-      Date: new Date(response.data.current.dt * 1000),
+      date: new Date(response.data.dt * 1000),
       city: response.data.name,
       coords: response.data.coord,
       temperature: response.data.main.temp,
