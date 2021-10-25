@@ -9,6 +9,7 @@ export default function Weather(props) {
 
   function findWeather(response) {
     console.log(response.data.dt*1000);
+    console.log(response.data.weather[0].description)
     setWeather({
       ready: true,
       date: new Date(response.data.dt * 1000),
@@ -42,7 +43,7 @@ export default function Weather(props) {
       <div className="Weather">
         <form onSubmit={handleSubmit}>
           <div className="row">
-            <div className="col-9">
+            <div className="col-8">
               <input
                 type="search"
                 placeholder="Type a city"

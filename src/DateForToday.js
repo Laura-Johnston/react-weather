@@ -21,10 +21,8 @@ export default function DateForToday(props) {
     minutes = `0${minutes}`;
   }
   return (
-    <div>
-      {hours}:{minutes}
-      <br />
-      {day}
+    <div className="dates">
+    {day}, {hours}:{minutes}
     </div>
   );
 
